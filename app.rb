@@ -30,3 +30,13 @@ get '/named-cat' do
   @random_name = params[:mietz_name]
   erb(:named_cat)
 end
+
+get '/form' do
+  erb(:form)
+end
+
+post '/named-cat' do
+  p params
+  @random_name = params[:mietz_name]
+  erb(:named_cat)
+end
