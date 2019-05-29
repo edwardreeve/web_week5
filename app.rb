@@ -21,5 +21,6 @@ get '/about-us' do
 end
 
 get '/cat' do
+  @random_name = ['The Mietz', 'Mootzenbootz', 'L\'il Pony'].sample
   erb(:index)
 end
