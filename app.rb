@@ -9,7 +9,7 @@ get '/secret' do
 end
 
 get '/edspage' do
-  "WOOOHOOOOO! GREAT PAGE!"
+  'WOOOHOOOOO! GREAT PAGE!'
 end
 
 get '/tajspage' do
@@ -17,10 +17,16 @@ get '/tajspage' do
 end
 
 get '/about-us' do
-  "Programmers par excellence"
+  'Programmers par excellence'
 end
 
-get '/cat' do
+get '/random-cat' do
   @random_name = ['The Mietz', 'Mootzenbootz', 'L\'il Pony'].sample
   erb(:index)
+end
+
+get '/named-cat' do
+  p params
+  @random_name = params[:mietz_name]
+  erb(:named_cat)
 end
